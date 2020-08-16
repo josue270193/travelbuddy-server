@@ -3,12 +3,13 @@ const scrapeIt = require('scrape-it');
 const _ = require('lodash');
 
 const router = express.Router();
+const URL_TRIPADVISOR = 'https://www.tripadvisor.com.ar';
 
 const asyncMiddleware = (fn) => (req, res, next) => {
   Promise.resolve(fn(req, res, next)).catch(next);
 };
 
-const transformDataTripadvisor = (data, url) => {
+const transformData = (data, url) => {
   const result = _.assign({}, data);
   if (result) {
     result.url = url;
@@ -19,21 +20,47 @@ const transformDataTripadvisor = (data, url) => {
   return result;
 };
 
-const getUrlTripadvisor = (numberPage) => {
-  let urlTripadvisor = 'https://www.tripadvisor.com.ar/';
-  const valuePage = numberPage * 20;
-  const urlArgentinaInitial = 'ShowForum-g294266-i977-Argentina.html';
-  const urlArgentinaPage = `ShowForum-g294266-i977-o${valuePage}-Argentina.html`;
-  if (numberPage) {
-    urlTripadvisor = urlTripadvisor.concat(urlArgentinaPage);
-  } else {
-    urlTripadvisor = urlTripadvisor.concat(urlArgentinaInitial);
-  }
-  return urlTripadvisor;
+const getUrlPost = (urlPost) => {
+  return `${URL_TRIPADVISOR}${urlPost}`;
 };
 
-const getInformationTripadvisor = (numberPage) => {
-  const url = getUrlTripadvisor(numberPage);
+const getUrl = (numberPage) => {
+  if (numberPage) {
+    const valuePage = numberPage * 20;
+    const urlArgentinaPage = `/ShowForum-g294266-i977-o${valuePage}-Argentina.html`;
+    return `${URL_TRIPADVISOR}${urlArgentinaPage}`;
+  }
+  const urlArgentinaInitial = '/ShowForum-g294266-i977-Argentina.html';
+  return `${URL_TRIPADVISOR}${urlArgentinaInitial}`;
+};
+
+const getInformationPostDetail = (urlPost) => {
+  const url = getUrlPost(urlPost);
+  return scrapeIt(url, {
+    title: '.firstPostBox.topTitleText',
+  }).then(({ data, response }) => {
+    console.log(`url: ${url} - status: ${response.statusCode}`);
+    return data;
+  });
+};
+
+const getInformationPost = (pageData, url) => {
+  const pageDataFilter = transformData(pageData, url);
+  const promises = [];
+  if (pageDataFilter.topics) {
+    pageDataFilter.topics.forEach((item) =>
+      promises.push(getInformationPostDetail(item.temaLink))
+    );
+  }
+  return Promise.all(promises).then((value) => {
+    console.log('getInformationPostDetail - DONE');
+    console.log(value);
+    return pageDataFilter;
+  });
+};
+
+const getInformation = (numberPage) => {
+  const url = getUrl(numberPage);
   return scrapeIt(url, {
     topics: {
       listItem: '#SHOW_FORUMS_TABLE > tr',
@@ -48,9 +75,8 @@ const getInformationTripadvisor = (numberPage) => {
     },
     title: '#HEADING',
   }).then(({ data, response }) => {
-    transformDataTripadvisor(data, url);
     console.log(`url: ${url} - status: ${response.statusCode}`);
-    return data;
+    return getInformationPost(data, url);
   });
 };
 
@@ -58,11 +84,9 @@ router.get(
   '/',
   asyncMiddleware(async (req, res) => {
     const promises = [];
-    _.range(1).forEach((value) =>
-      promises.push(getInformationTripadvisor(value))
-    );
+    _.range(1).forEach((value) => promises.push(getInformation(value)));
     Promise.all(promises).then((value) => {
-      console.log('DONE');
+      console.log('getInformation - DONE');
       res.json(value);
     });
   })
