@@ -3,7 +3,7 @@ const _ = require('lodash');
 
 const URL_TRIPADVISOR = 'https://www.tripadvisor.com.ar';
 
-const transformData = (data, url) => {
+const transformDataForum = (data, url) => {
   const result = _.assign({}, data);
   if (result) {
     result.url = url;
@@ -28,32 +28,45 @@ const getUrl = (numberPage) => {
   return `${URL_TRIPADVISOR}${urlArgentinaInitial}`;
 };
 
-const getInformationPostDetail = (urlPost) => {
+const getScrapPost = (urlPost) => {
   const url = getUrlPost(urlPost);
   return scrapeIt(url, {
-    title: '.firstPostBox.topTitleText',
+    title: '#SHOW_TOPIC .firstPostBox .topTitleText',
+    responses: {
+      listItem: '#SHOW_TOPIC .post',
+      data: {
+        content: '.postcontent .postBody > p',
+      },
+    },
   }).then(({ data, response }) => {
     console.log(`url: ${url} - status: ${response.statusCode}`);
     return data;
   });
 };
 
-const getInformationPost = (pageData, url) => {
-  const pageDataFilter = transformData(pageData, url);
-  const promises = [];
-  if (pageDataFilter.topics) {
-    pageDataFilter.topics.forEach((item) =>
-      promises.push(getInformationPostDetail(item.temaLink))
-    );
-  }
-  return Promise.all(promises).then((value) => {
-    console.log('getInformationPostDetail - DONE');
-    console.log(value);
-    return pageDataFilter;
+const obtainInformationPostDetail = (postData) => {
+  const data = _.assign({}, postData);
+  return getScrapPost(data.temaLink).then((value) => {
+    data.detail = value;
+    return data;
   });
 };
 
-const getInformation = (numberPage) => {
+const obtainInformationPost = (pageData, url) => {
+  const pageDataFilter = transformDataForum(pageData, url);
+  const promises = [];
+  if (pageDataFilter.topics) {
+    pageDataFilter.topics.forEach((item) =>
+      promises.push(obtainInformationPostDetail(item))
+    );
+  }
+  return Promise.all(promises).then((value) => {
+    console.log('obtainInformationPost - DONE');
+    return value;
+  });
+};
+
+const getScrap = (numberPage) => {
   const url = getUrl(numberPage);
   return scrapeIt(url, {
     topics: {
@@ -70,8 +83,11 @@ const getInformation = (numberPage) => {
     title: '#HEADING',
   }).then(({ data, response }) => {
     console.log(`url: ${url} - status: ${response.statusCode}`);
-    return getInformationPost(data, url);
+    return obtainInformationPost(data, url);
   });
 };
 
-export default { getInformation };
+module.exports = {
+  getInformation: getScrap,
+  getInformationPost: getScrapPost,
+};

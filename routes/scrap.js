@@ -1,6 +1,6 @@
 const express = require('express');
 const _ = require('lodash');
-const { getInformation } = require('../service/tripadvisor')
+const tripadvisor = require('../service/tripadvisor');
 
 const router = express.Router();
 
@@ -12,12 +12,23 @@ router.get(
   '/',
   asyncMiddleware(async (req, res) => {
     const promises = [];
-    _.range(1).forEach((value) => promises.push(getInformation(value)));
+    _.range(1).forEach((value) => promises.push(tripadvisor.getInformation(value)));
     Promise.all(promises).then((value) => {
       console.log('getInformation - DONE');
       res.json(value);
     });
   })
+);
+
+router.get(
+    '/post',
+    asyncMiddleware(async (req, res) => {
+        const urlPost = req.query.url;
+        tripadvisor.getInformationPost(urlPost).then((value) => {
+            console.log('getInformationPost - DONE');
+            res.json(value);
+        });
+    })
 );
 
 module.exports = router;
