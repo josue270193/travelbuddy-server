@@ -10,8 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5214a91a-b30b-49f4-80f9-ef160252fd12" name="Default Changelist" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="5214a91a-b30b-49f4-80f9-ef160252fd12" name="Default Changelist" comment="feat: Added ignore .idea&#10;feat: Added method for scrap post">
+      <change afterPath="$PROJECT_DIR$/service/tripadvisor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/scrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/scrap.js" afterDir="false" />
     </list>
@@ -24,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -111,7 +112,7 @@
       <workItem from="1597515892589" duration="6081000" />
       <workItem from="1597527228557" duration="1194000" />
       <workItem from="1597528429232" duration="5654000" />
-      <workItem from="1597538117954" duration="2859000" />
+      <workItem from="1597538117954" duration="3524000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1597538151166</created>
@@ -120,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597538151166</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Added ignore .idea&#10;feat: Added method for scrap post">
+      <created>1597541048341</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597541048341</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +147,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="feat: Added ignore .idea&#10;feat: Added method for scrap post" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Added ignore .idea&#10;feat: Added method for scrap post" />
   </component>
   <component name="WindowStateProjectService">
     <state x="806" y="431" width="312" height="238" key="#ESLint" timestamp="1597529718705">
@@ -242,10 +251,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="449" y="175" width="1022" height="737" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1597531006193" />
-    <state x="555" y="262" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1597538163699">
+    <state x="555" y="262" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1597541051011">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="555" y="262" width="800" height="563" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1597538163699" />
+    <state x="555" y="262" width="800" height="563" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1597541051011" />
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597520038793">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
