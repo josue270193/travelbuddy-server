@@ -1,0 +1,27 @@
+{
+  "name": "travelbuddyserver",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "lodash": "^4.17.20",
+    "morgan": "~1.9.1",
+    "scrape-it": "^5.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "prettier": "2.0.5"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
