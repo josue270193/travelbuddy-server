@@ -21,7 +21,7 @@ router.get('/list', (req, res) => {
   const newCity = new City('Salta', 7);
   newCity.id = 7;
   newCity.name = 'Salta Capital';
-  newCity.populationNumber = 1000;
+  newCity.populationNumber = 1111000;
   cities.push(newCity);
   res.json(cities);
 });

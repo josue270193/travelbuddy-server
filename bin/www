@@ -8,6 +8,10 @@ var app = require('../app');
 var debug = require('debug')('travelbuddyserver:server');
 var http = require('http');
 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
 /**
  * Get port from environment and store in Express.
  */
