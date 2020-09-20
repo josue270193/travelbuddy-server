@@ -1,16 +1,17 @@
-import { Service, Inject } from 'typedi';
+import { Inject, Service } from 'typedi';
 import jwt from 'jsonwebtoken';
 import config from '../config';
 import argon2 from 'argon2';
 import { randomBytes } from 'crypto';
 import { IUser, IUserInputDTO } from '../interfaces/IUser';
+import UserModel from '../models/user';
 import { EventDispatcher, EventDispatcherInterface } from '../decorators/eventDispatcher';
 import events from '../subscribers/events';
 
 @Service()
 export default class AuthService {
   constructor(
-    @Inject('userModel') private userModel: Models.UserModel,
+    @Inject('userModel') private userModel: typeof UserModel,
     @Inject('logger') private logger,
     @EventDispatcher() private eventDispatcher: EventDispatcherInterface,
   ) {}

@@ -1,6 +1,9 @@
 import { Container } from 'typedi';
 import mongoose from 'mongoose';
 import { IUser } from '../../interfaces/IUser';
+import LoggerInstance from '../../loaders/logger';
+import { IUserRequest } from '../../interfaces/IUserRequest';
+import { NextFunction, Response } from 'express';
 
 /**
  * Attach user to req.currentUser
@@ -8,8 +11,8 @@ import { IUser } from '../../interfaces/IUser';
  * @param {*} res  Express res Object
  * @param {*} next  Express next Function
  */
-const attachCurrentUser = async (req, res, next) => {
-  const Logger = Container.get('logger');
+const attachCurrentUser = async (req: IUserRequest, res: Response, next: NextFunction): Promise<unknown> => {
+  const Logger = Container.get<typeof LoggerInstance>('logger');
   try {
     const UserModel = Container.get('userModel') as mongoose.Model<IUser & mongoose.Document>;
     const userRecord = await UserModel.findById(req.token._id);

@@ -4,10 +4,11 @@ import AuthService from '../../services/auth';
 import middlewares from '../middlewares';
 import { celebrate, Joi } from 'celebrate';
 import { IUserInputDTO } from '../../interfaces/IUser';
+import LoggerInstance from '../../loaders/logger';
 
 const route = Router();
 
-export default (app: Router) => {
+export default (app: Router): void => {
   app.use('/auth', route);
 
   route.post(
@@ -20,7 +21,7 @@ export default (app: Router) => {
       }),
     }),
     async (req: Request, res: Response, next: NextFunction) => {
-      const logger = Container.get('logger');
+      const logger = Container.get<typeof LoggerInstance>('logger');
       logger.debug('Calling Sign-Up endpoint with body: %o', req.body);
       try {
         const authServiceInstance = Container.get(AuthService);
@@ -42,7 +43,7 @@ export default (app: Router) => {
       }),
     }),
     async (req: Request, res: Response, next: NextFunction) => {
-      const logger = Container.get('logger');
+      const logger = Container.get<typeof LoggerInstance>('logger');
       logger.debug('Calling Sign-In endpoint with body: %o', req.body);
       try {
         const { email, password } = req.body;
@@ -57,7 +58,7 @@ export default (app: Router) => {
   );
 
   route.post('/logout', middlewares.isAuth, (req: Request, res: Response, next: NextFunction) => {
-    const logger = Container.get('logger');
+    const logger = Container.get<typeof LoggerInstance>('logger');
     logger.debug('Calling Sign-Out endpoint with body: %o', req.body);
     try {
       //@TODO AuthService.Logout(req.user) do some clever stuff

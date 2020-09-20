@@ -14,24 +14,20 @@ export default {
    * Your favorite port
    */
   port: parseInt(process.env.PORT, 10),
-
   /**
    * That long string from mlab
    */
   databaseURL: process.env.MONGODB_URI,
-
   /**
    * Your secret sauce
    */
   jwtSecret: process.env.JWT_SECRET,
-
   /**
    * Used by winston logger
    */
   logs: {
     level: process.env.LOG_LEVEL || 'silly',
   },
-
   /**
    * Agenda.js stuff
    */
@@ -40,7 +36,20 @@ export default {
     pooltime: process.env.AGENDA_POOL_TIME,
     concurrency: parseInt(process.env.AGENDA_CONCURRENCY, 10),
   },
-
+  /**
+   * Tripadvisor config
+   */
+  tripadvisor: {
+    baseUrl: 'https://www.tripadvisor.com.ar',
+    countryDefault: 'argentina',
+    countries: [
+      {
+        name: 'argentina',
+        urlIndex: '/ShowForum-g294266-i977-Argentina.html',
+        urlPage: '/ShowForum-g294266-i977-o%%-Argentina.html',
+      },
+    ],
+  },
   /**
    * Agendash config
    */

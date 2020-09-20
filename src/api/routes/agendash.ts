@@ -4,7 +4,7 @@ import agendash from 'agendash';
 import { Container } from 'typedi';
 import config from '../../config';
 
-export default (app: Router) => {
+export default (app: Router): void => {
   const agendaInstance = Container.get('agendaInstance');
 
   app.use(

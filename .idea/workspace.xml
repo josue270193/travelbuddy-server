@@ -1,65 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6342f1f1-6e73-4782-83bd-f9fcaad9125e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/middlewares/attachCurrentUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/middlewares/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/middlewares/isAuth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/routes/agendash.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/routes/auth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/routes/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/decorators/eventDispatcher.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/IUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loaders/agenda.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loaders/dependencyInjector.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loaders/events.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loaders/express.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loaders/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loaders/jobs.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loaders/logger.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loaders/mongoose.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/auth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/subscribers/events.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" beforeDir="false" />
+    <list default="true" id="6342f1f1-6e73-4782-83bd-f9fcaad9125e" name="Default Changelist" comment="feat: Added method to create files with text from tripadvisor">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_argentina.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_buenos_aires.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_cafayate.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_cordoba.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_cuyo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_esteros_del_ibera.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_mar_del_plata.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_norte_de_argentina.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_perito_moreno.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_provincia_de_cordoba.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_tandil.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_tomas_jofre.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_villa_carlos_paz.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_villa_la_angostura.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/routes/npl.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/routes/tripadvisor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/IUserRequest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/loaders/clientAzure.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/enum/typeNpl.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/npl.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/tripadvisor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/subscribers/user.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/old/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/city.js" beforeDir="false" afterPath="$PROJECT_DIR$/old/domain/city.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/bin/www" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/domain/city.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/public/cartel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/routes/city.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/routes/mongodb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/routes/scrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/service/mongodb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/service/tripadvisor.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/cartel.html" beforeDir="false" afterPath="$PROJECT_DIR$/old/public/cartel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/old/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/city.js" beforeDir="false" afterPath="$PROJECT_DIR$/old/routes/city.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/old/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/mongodb.js" beforeDir="false" afterPath="$PROJECT_DIR$/old/routes/mongodb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/scrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/old/routes/scrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/mongodb.js" beforeDir="false" afterPath="$PROJECT_DIR$/old/service/mongodb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/tripadvisor.js" beforeDir="false" afterPath="$PROJECT_DIR$/old/service/tripadvisor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/middlewares/attachCurrentUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/middlewares/attachCurrentUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/middlewares/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/middlewares/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/middlewares/isAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/middlewares/isAuth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/routes/agendash.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/agendash.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/routes/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/routes/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loaders/dependencyInjector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/loaders/dependencyInjector.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loaders/mongoose.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/loaders/mongoose.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -68,6 +83,10 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1gFh6R5f05manIYtFgCVhbWupU0" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -75,7 +94,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="js.last.introduce.type" value="CONST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/loaders" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -88,10 +108,24 @@
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v14.8.0/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/loaders" />
+      <recent name="$PROJECT_DIR$/src/services" />
+      <recent name="$PROJECT_DIR$/src/api/routes" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/models/enum" />
+      <recent name="$PROJECT_DIR$/src/models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -102,9 +136,42 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint:eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:eslint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.lint:eslint" />
       </list>
     </recent_temporary>
   </component>
@@ -117,41 +184,181 @@
       <option name="presentableId" value="Default" />
       <updated>1597716071591</updated>
       <workItem from="1597716072621" duration="534000" />
+      <workItem from="1597716740115" duration="8760000" />
+      <workItem from="1597790415627" duration="6718000" />
+      <workItem from="1598035047320" duration="616000" />
+      <workItem from="1598068336848" duration="12105000" />
+      <workItem from="1600529528931" duration="2265000" />
+      <workItem from="1600622283252" duration="7253000" />
+      <workItem from="1600635421206" duration="2853000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Added method to create files with text from tripadvisor" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Added method to create files with text from tripadvisor" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="644" y="342" width="621" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597722934918">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="644" y="342" width="621" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1597722934918" />
+    <state x="693" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598084670016">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="693" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598084670016" />
+    <state x="718" y="284" key="#xdebugger.evaluate" timestamp="1600627639268">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="718" y="284" key="#xdebugger.evaluate/0.0.1920.1080@0.0.1920.1080" timestamp="1600627639268" />
     <state x="342" y="88" width="1226" height="911" key="CommitChangelistDialog2" timestamp="1597716098375">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="342" y="88" width="1226" height="911" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1597716098375" />
-    <state width="1897" height="284" key="GridCell.Tab.0.bottom" timestamp="1597716313021">
+    <state width="1340" height="506" key="DebuggerActiveHint" timestamp="1600627995502">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1597716313021" />
-    <state width="1897" height="284" key="GridCell.Tab.0.center" timestamp="1597716313021">
+    <state width="1340" height="506" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1600627995502" />
+    <state width="1897" height="284" key="GridCell.Tab.0.bottom" timestamp="1600638579673">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="284" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1597716313021" />
-    <state width="1897" height="284" key="GridCell.Tab.0.left" timestamp="1597716313021">
+    <state width="1897" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600638579673" />
+    <state width="1897" height="284" key="GridCell.Tab.0.center" timestamp="1600638579673">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="284" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1597716313021" />
-    <state width="1897" height="284" key="GridCell.Tab.0.right" timestamp="1597716313021">
+    <state width="1897" height="284" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600638579673" />
+    <state width="1897" height="284" key="GridCell.Tab.0.left" timestamp="1600638579672">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="284" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1597716313021" />
-    <state x="449" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1597716605743">
+    <state width="1897" height="284" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600638579672" />
+    <state width="1897" height="284" key="GridCell.Tab.0.right" timestamp="1600638579673">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="449" y="175" width="1022" height="737" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1597716605743" />
-    <state x="651" y="279" width="618" height="522" key="find.popup" timestamp="1597716305996">
+    <state width="1897" height="284" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600638579673" />
+    <state width="1897" height="344" key="GridCell.Tab.1.bottom" timestamp="1600637496238">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="651" y="279" width="618" height="522" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1597716305996" />
+    <state width="1897" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
+    <state width="1897" height="344" key="GridCell.Tab.1.center" timestamp="1600637496237">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="344" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496237" />
+    <state width="1897" height="344" key="GridCell.Tab.1.left" timestamp="1600637496237">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="344" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496237" />
+    <state width="1897" height="344" key="GridCell.Tab.1.right" timestamp="1600637496238">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="344" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
+    <state width="1897" height="344" key="GridCell.Tab.2.bottom" timestamp="1600637496238">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="344" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
+    <state width="1897" height="344" key="GridCell.Tab.2.center" timestamp="1600637496238">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="344" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
+    <state width="1897" height="344" key="GridCell.Tab.2.left" timestamp="1600637496238">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="344" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
+    <state width="1897" height="344" key="GridCell.Tab.2.right" timestamp="1600637496238">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="344" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
+    <state width="1897" height="344" key="GridCell.Tab.3.bottom" timestamp="1600637496239">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="344" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496239" />
+    <state width="1897" height="344" key="GridCell.Tab.3.center" timestamp="1600637496238">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="344" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
+    <state width="1897" height="344" key="GridCell.Tab.3.left" timestamp="1600637496238">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="344" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
+    <state width="1897" height="344" key="GridCell.Tab.3.right" timestamp="1600637496238">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="344" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
+    <state x="449" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1597717788776">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="449" y="175" width="1022" height="737" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1597717788776" />
+    <state x="570" y="153" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600627515636">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="570" y="153" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1600627515636" />
+    <state x="741" y="455" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597716824561">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="741" y="455" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1597716824561" />
+    <state x="651" y="279" width="618" height="580" key="find.popup" timestamp="1600623596124">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="651" y="279" width="618" height="580" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1600623596124" />
+    <state x="671" y="312" width="568" height="462" key="refactoring.ChangeSignatureDialog" timestamp="1597799338610">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="671" y="312" width="568" height="462" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1597799338610" />
+    <state x="624" y="245" key="run.anything.popup" timestamp="1597732044732">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="624" y="245" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1597732044732" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1600638385069">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1600638385069" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
