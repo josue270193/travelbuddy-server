@@ -54,7 +54,7 @@ export default (app: Router): void => {
       logger.debug('Calling Scrapping Tripadvisor Post endpoint with query: %o', req.query);
       try {
         const tripadvisorServiceInstance = Container.get(TripadvisorService);
-        const result = await tripadvisorServiceInstance.getInformationPost(req.query.url);
+        const result = await tripadvisorServiceInstance.getInformationPost(req.query.url.toString());
         return res.json(result).status(200);
       } catch (err) {
         logger.error('🔥 error: %o', err);

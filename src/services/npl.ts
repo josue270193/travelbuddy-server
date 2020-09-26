@@ -2,7 +2,7 @@ import { Inject, Service } from 'typedi';
 import { EventDispatcher, EventDispatcherInterface } from '../decorators/eventDispatcher';
 import TypeNpl from '../models/enum/typeNpl';
 import { TextAnalyticsClient } from '@azure/ai-text-analytics';
-import { PythonShell } from 'python-shell';
+import { Options, PythonShell } from 'python-shell';
 
 @Service()
 export default class NplService {
@@ -44,7 +44,7 @@ export default class NplService {
       pythonOptions: ['-u'],
       scriptPath: '/home/josue/PycharmProjects/travelBuddyNpl',
       args: [`-t "${text}"`],
-    };
+    } as Options;
     const filePython = 'main.py';
 
     return new Promise((resolve, reject) => {
