@@ -59,16 +59,39 @@ export default class TripadvisorService {
     fs.mkdirSync(pathDir, { recursive: true });
     const extractData = TripadvisorService.extractDataFromJson(jsonData);
     for (const [key, list] of extractData) {
-      const targetFile = `extract_${ts}_${key}.txt`;
-      const pathFile = path.join(__dirname, '..', '..', targetDir, targetFile);
-
-      const stream = fs.createWriteStream(pathFile);
-      stream.once('open', function (_) {
-        list.forEach((text) => stream.write(`${text}\n`));
-        stream.end();
-        console.log('Archivo creado en: ', pathFile);
-      });
+      this.generateFileDataExtract(ts, targetDir, key, list);
+      this.generateFileDataCats(ts, targetDir, key, list);
     }
+  }
+
+  private generateFileDataCats(ts: number, targetDir: string, key: string, list: any[]): void {
+    const targetSubDir = 'cats';
+    const targetFile = `${key}_${ts}.txt`;
+    const pathDir = path.join(__dirname, '..', '..', targetDir, targetSubDir);
+    fs.mkdirSync(pathDir, { recursive: true });
+    const pathFile = path.join(__dirname, '..', '..', targetDir, targetSubDir, targetFile);
+
+    const stream = fs.createWriteStream(pathFile);
+    stream.once('open', () => {
+      list.forEach((text) => stream.write(`\t${text}\n`));
+      stream.end();
+      console.log('Archivo creado en: ', pathFile);
+    });
+  }
+
+  private generateFileDataExtract(ts: number, targetDir: string, key: string, list: any[]): void {
+    const targetSubDir = 'extract';
+    const targetFile = `${key}_${ts}.txt`;
+    const pathDir = path.join(__dirname, '..', '..', targetDir, targetSubDir);
+    fs.mkdirSync(pathDir, { recursive: true });
+    const pathFile = path.join(__dirname, '..', '..', targetDir, targetSubDir, targetFile);
+
+    const stream = fs.createWriteStream(pathFile);
+    stream.once('open', () => {
+      list.forEach((text) => stream.write(`${text}\n`));
+      stream.end();
+      console.log('Archivo creado en: ', pathFile);
+    });
   }
 
   private static extractDataFromJson(jsonData): Map<string, any[]> {

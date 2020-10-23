@@ -19,19 +19,19 @@ export default class AuthService {
   public async SignUp(userInputDTO: IUserInputDTO): Promise<{ user: IUser; token: string }> {
     try {
       const salt = randomBytes(32);
-      this.logger.silly('Hashing password');
+      this.logger.silly('Hashing contrasena');
       const hashedPassword = await argon2.hash(userInputDTO.password, { salt });
-      this.logger.silly('Creating user db record');
+      this.logger.silly('Creando usuario en la BD');
       const userRecord = await this.userModel.create({
         ...userInputDTO,
         salt: salt.toString('hex'),
         password: hashedPassword,
       });
-      this.logger.silly('Generating JWT');
+      this.logger.silly('Generando JWT');
       const token = this.generateToken(userRecord);
 
       if (!userRecord) {
-        throw new Error('User cannot be created');
+        throw new Error('El usuario no pudo ser creado');
       }
       // this.logger.silly('Sending welcome email');
       // await this.mailer.SendWelcomeEmail(userRecord);

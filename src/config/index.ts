@@ -46,15 +46,15 @@ export default {
       {
         name: 'argentina',
         urlIndex: '/ShowForum-g294266-i977-Argentina.html',
-        urlPage: '/ShowForum-g294266-i977-o%%-Argentina.html',
+        urlPage: '/ShowForum-g294266-i977-o%s-Argentina.html',
       },
     ],
   },
   /**
-   * Agendash config
+   * Admin config
    */
-  agendash: {
-    user: 'agenda',
+  admin: {
+    user: 'admin',
     password: '123456',
   },
   /**

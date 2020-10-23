@@ -11,7 +11,7 @@ export default (app: Router): void => {
     '/dash',
     basicAuth({
       users: {
-        [config.agendash.user]: config.agendash.password,
+        [config.admin.user]: config.admin.password,
       },
       challenge: true,
     }),

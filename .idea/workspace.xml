@@ -5,56 +5,59 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6342f1f1-6e73-4782-83bd-f9fcaad9125e" name="Default Changelist" comment="feat: Added method to create files with text from tripadvisor">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_argentina.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_buenos_aires.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_cafayate.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_cordoba.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_cuyo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_esteros_del_ibera.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_mar_del_plata.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_norte_de_argentina.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_perito_moreno.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_provincia_de_cordoba.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_tandil.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_tomas_jofre.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_villa_carlos_paz.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/extract_1600635820681_villa_la_angostura.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/routes/npl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/routes/tripadvisor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/IUserRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loaders/clientAzure.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/enum/typeNpl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/npl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/tripadvisor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/subscribers/user.ts" afterDir="false" />
+    <list default="true" id="6342f1f1-6e73-4782-83bd-f9fcaad9125e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/img/60403.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/js/jquery-3.3.1.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/assets/js/project.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/routes/city.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/ICity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/IConfiguration.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/city.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/cityEntity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/cityRanking.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/configuration.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/enum/typeSortCity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/city.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/bin/www" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/domain/city.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/public/cartel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/routes/city.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/routes/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/routes/mongodb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/routes/scrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/service/mongodb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/service/tripadvisor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_argentina.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_buenos_aires.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_cafayate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_cordoba.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_cuyo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_esteros_del_ibera.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_mar_del_plata.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_norte_de_argentina.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_perito_moreno.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_provincia_de_cordoba.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_tandil.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_tomas_jofre.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_villa_carlos_paz.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/extract_1600635820681_villa_la_angostura.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/middlewares/attachCurrentUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/middlewares/attachCurrentUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/middlewares/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/middlewares/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/middlewares/isAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/middlewares/isAuth.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/routes/agendash.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/agendash.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/routes/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/routes/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/routes/npl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/npl.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loaders/dependencyInjector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/loaders/dependencyInjector.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loaders/mongoose.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/loaders/mongoose.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loaders/express.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/loaders/express.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loaders/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/loaders/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/npl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/npl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/tripadvisor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/tripadvisor.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +85,11 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
   <component name="ProjectId" id="1gFh6R5f05manIYtFgCVhbWupU0" />
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
@@ -95,7 +103,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/loaders" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/models" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -109,23 +117,25 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/loaders" />
-      <recent name="$PROJECT_DIR$/src/services" />
-      <recent name="$PROJECT_DIR$/src/api/routes" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/api/public" />
       <recent name="$PROJECT_DIR$/src/models/enum" />
       <recent name="$PROJECT_DIR$/src/models" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/models" />
+      <recent name="$PROJECT_DIR$/src/models/enum" />
+      <recent name="$PROJECT_DIR$/src/services" />
+      <recent name="$PROJECT_DIR$/src/api/routes" />
+      <recent name="$PROJECT_DIR$/src/interfaces" />
+    </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.start">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -168,8 +178,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.lint:eslint" />
       </list>
@@ -190,8 +200,43 @@
       <workItem from="1598068336848" duration="12105000" />
       <workItem from="1600529528931" duration="2265000" />
       <workItem from="1600622283252" duration="7253000" />
-      <workItem from="1600635421206" duration="2853000" />
+      <workItem from="1600635421206" duration="5983000" />
+      <workItem from="1601127573723" duration="9112000" />
+      <workItem from="1601920604803" duration="15126000" />
+      <workItem from="1601953531700" duration="13451000" />
+      <workItem from="1602174835862" duration="57315000" />
+      <workItem from="1602355295826" duration="2406000" />
+      <workItem from="1602445131011" duration="36000" />
+      <workItem from="1602946733423" duration="2243000" />
+      <workItem from="1602974397604" duration="23550000" />
+      <workItem from="1603080322633" duration="606000" />
+      <workItem from="1603208381623" duration="652000" />
+      <workItem from="1603284658564" duration="468000" />
+      <workItem from="1603291424700" duration="5668000" />
+      <workItem from="1603421427368" duration="7723000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: Added method to create files with text from tripadvisor">
+      <created>1600639357924</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600639357924</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Added folder out on gitignore">
+      <created>1600639416316</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600639416316</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix: Fixed build and added dom on configuration">
+      <created>1601127862217</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601127862217</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,122 +288,149 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="feat: Added method to create files with text from tripadvisor" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Added method to create files with text from tripadvisor" />
+    <MESSAGE value="feat: Added folder out on gitignore" />
+    <MESSAGE value="fix: Fixed build and added dom on configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Fixed build and added dom on configuration" />
   </component>
   <component name="WindowStateProjectService">
     <state x="644" y="342" width="621" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597722934918">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="644" y="342" width="621" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1597722934918" />
-    <state x="693" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598084670016">
+    <state x="768" y="259" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1602257509945">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="693" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598084670016" />
-    <state x="718" y="284" key="#xdebugger.evaluate" timestamp="1600627639268">
+    <state x="768" y="259" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1602257509945" />
+    <state x="693" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601131773713">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="718" y="284" key="#xdebugger.evaluate/0.0.1920.1080@0.0.1920.1080" timestamp="1600627639268" />
-    <state x="342" y="88" width="1226" height="911" key="CommitChangelistDialog2" timestamp="1597716098375">
+    <state x="693" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601131773713" />
+    <state x="1082" y="327" width="776" height="587" key="#xdebugger.evaluate" timestamp="1603047526658">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="342" y="88" width="1226" height="911" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1597716098375" />
-    <state width="1340" height="506" key="DebuggerActiveHint" timestamp="1600627995502">
+    <state x="1082" y="327" width="776" height="587" key="#xdebugger.evaluate/0.0.1920.1080@0.0.1920.1080" timestamp="1603047526658" />
+    <state x="342" y="88" width="1226" height="911" key="CommitChangelistDialog2" timestamp="1601127862127">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="506" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1600627995502" />
-    <state width="1897" height="284" key="GridCell.Tab.0.bottom" timestamp="1600638579673">
+    <state x="342" y="88" width="1226" height="911" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1601127862127" />
+    <state width="1340" height="506" key="DebuggerActiveHint" timestamp="1603436783038">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600638579673" />
-    <state width="1897" height="284" key="GridCell.Tab.0.center" timestamp="1600638579673">
+    <state width="1340" height="506" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1603436783038" />
+    <state x="100" y="100" width="1720" height="880" key="DiffContextDialog" timestamp="1601131844234">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="284" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600638579673" />
-    <state width="1897" height="284" key="GridCell.Tab.0.left" timestamp="1600638579672">
+    <state x="100" y="100" width="1720" height="880" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601131844234" />
+    <state width="1897" height="344" key="GridCell.Tab.0.bottom" timestamp="1603436809933">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="284" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600638579672" />
-    <state width="1897" height="284" key="GridCell.Tab.0.right" timestamp="1600638579673">
+    <state width="1897" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603436809933" />
+    <state width="1897" height="344" key="GridCell.Tab.0.center" timestamp="1603436809932">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="284" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600638579673" />
-    <state width="1897" height="344" key="GridCell.Tab.1.bottom" timestamp="1600637496238">
+    <state width="1897" height="344" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603436809932" />
+    <state width="1897" height="344" key="GridCell.Tab.0.left" timestamp="1603436809931">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
-    <state width="1897" height="344" key="GridCell.Tab.1.center" timestamp="1600637496237">
+    <state width="1897" height="344" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603436809931" />
+    <state width="1897" height="344" key="GridCell.Tab.0.right" timestamp="1603436809932">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496237" />
-    <state width="1897" height="344" key="GridCell.Tab.1.left" timestamp="1600637496237">
+    <state width="1897" height="344" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603436809932" />
+    <state width="1897" height="344" key="GridCell.Tab.1.bottom" timestamp="1603436774265">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496237" />
-    <state width="1897" height="344" key="GridCell.Tab.1.right" timestamp="1600637496238">
+    <state width="1897" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603436774265" />
+    <state width="1897" height="344" key="GridCell.Tab.1.center" timestamp="1603436774265">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
-    <state width="1897" height="344" key="GridCell.Tab.2.bottom" timestamp="1600637496238">
+    <state width="1897" height="344" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603436774265" />
+    <state width="1897" height="344" key="GridCell.Tab.1.left" timestamp="1603436774265">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
-    <state width="1897" height="344" key="GridCell.Tab.2.center" timestamp="1600637496238">
+    <state width="1897" height="344" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603436774265" />
+    <state width="1897" height="344" key="GridCell.Tab.1.right" timestamp="1603436774265">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
-    <state width="1897" height="344" key="GridCell.Tab.2.left" timestamp="1600637496238">
+    <state width="1897" height="344" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603436774265" />
+    <state width="1897" height="344" key="GridCell.Tab.2.bottom" timestamp="1603436768328">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
-    <state width="1897" height="344" key="GridCell.Tab.2.right" timestamp="1600637496238">
+    <state width="1897" height="344" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603436768328" />
+    <state width="1897" height="344" key="GridCell.Tab.2.center" timestamp="1603436768328">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
-    <state width="1897" height="344" key="GridCell.Tab.3.bottom" timestamp="1600637496239">
+    <state width="1897" height="344" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603436768328" />
+    <state width="1897" height="344" key="GridCell.Tab.2.left" timestamp="1603436768328">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496239" />
-    <state width="1897" height="344" key="GridCell.Tab.3.center" timestamp="1600637496238">
+    <state width="1897" height="344" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603436768328" />
+    <state width="1897" height="344" key="GridCell.Tab.2.right" timestamp="1603436768328">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
-    <state width="1897" height="344" key="GridCell.Tab.3.left" timestamp="1600637496238">
+    <state width="1897" height="344" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603436768328" />
+    <state width="1897" height="344" key="GridCell.Tab.3.bottom" timestamp="1603436768329">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
-    <state width="1897" height="344" key="GridCell.Tab.3.right" timestamp="1600637496238">
+    <state width="1897" height="344" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603436768329" />
+    <state width="1897" height="344" key="GridCell.Tab.3.center" timestamp="1603436768329">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="344" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600637496238" />
-    <state x="449" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1597717788776">
+    <state width="1897" height="344" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603436768329" />
+    <state width="1897" height="344" key="GridCell.Tab.3.left" timestamp="1603436768329">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="449" y="175" width="1022" height="737" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1597717788776" />
-    <state x="570" y="153" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600627515636">
+    <state width="1897" height="344" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603436768329" />
+    <state width="1897" height="344" key="GridCell.Tab.3.right" timestamp="1603436768329">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="570" y="153" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1600627515636" />
+    <state width="1897" height="344" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603436768329" />
+    <state x="449" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1602445165813">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="449" y="175" width="1022" height="737" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1602445165813" />
+    <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1601127863860">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1601127863860" />
+    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603047144615">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603047144615" />
+    <state x="570" y="153" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603042008735">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="570" y="153" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1603042008735" />
     <state x="741" y="455" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597716824561">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="741" y="455" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1597716824561" />
-    <state x="651" y="279" width="618" height="580" key="find.popup" timestamp="1600623596124">
+    <state x="486" y="252" width="938" height="583" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602227518791">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="651" y="279" width="618" height="580" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1600623596124" />
-    <state x="671" y="312" width="568" height="462" key="refactoring.ChangeSignatureDialog" timestamp="1597799338610">
+    <state x="486" y="252" width="938" height="583" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1080@0.0.1920.1080" timestamp="1602227518791" />
+    <state x="370" y="278" width="1264" height="662" key="find.popup" timestamp="1603436722997">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="671" y="312" width="568" height="462" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1597799338610" />
+    <state x="370" y="278" width="1264" height="662" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603436722997" />
+    <state x="823" y="395" width="272" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1603037073782">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="823" y="395" width="272" height="278" key="jetbrains.javascript.buildTools.run-task-popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603037073782" />
+    <state x="671" y="312" width="568" height="462" key="refactoring.ChangeSignatureDialog" timestamp="1600639467676">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="671" y="312" width="568" height="462" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1600639467676" />
     <state x="624" y="245" key="run.anything.popup" timestamp="1597732044732">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="624" y="245" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1597732044732" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1600638385069">
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1602117341834">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1600638385069" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1602117341834" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>

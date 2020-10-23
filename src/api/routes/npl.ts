@@ -3,13 +3,45 @@ import { Container } from 'typedi';
 import NplService from '../../services/npl';
 import LoggerInstance from '../../loaders/logger';
 import { celebrate, Joi } from 'celebrate';
-import middlewares from '../middlewares';
 import TypeNpl from '../../models/enum/typeNpl';
+import basicAuth from 'express-basic-auth';
+import config from '../../config';
 
 const route = Router();
 
 export default (app: Router): void => {
   app.use('/npl', route);
+
+  route.post(
+    '/process',
+    celebrate({
+      body: Joi.object({
+        country: Joi.string().required(),
+        city: Joi.string().required(),
+      }),
+    }),
+    basicAuth({
+      users: {
+        [config.admin.user]: config.admin.password,
+      },
+      challenge: true,
+    }),
+    async (req: Request, res: Response, next) => {
+      const logger = Container.get<typeof LoggerInstance>('logger');
+      const nplService = Container.get(NplService);
+      try {
+        const country = req.body.country;
+        const city = req.body.city;
+        const textFile = (req as any).files.texts;
+        logger.debug(`Archivo a procesar: ${textFile.name}`);
+        const result = await nplService.processFile(country, city, textFile);
+        return res.json(result).status(200);
+      } catch (err) {
+        logger.error('🔥 error: %o', err);
+        return next(err);
+      }
+    },
+  );
 
   route.post(
     '/sentimentAnalysis',
@@ -20,6 +52,12 @@ export default (app: Router): void => {
           .valid(...Object.values(TypeNpl)),
         text: Joi.string().required(),
       }),
+    }),
+    basicAuth({
+      users: {
+        [config.admin.user]: config.admin.password,
+      },
+      challenge: true,
     }),
     async (req: Request, res: Response, next) => {
       const logger = Container.get<typeof LoggerInstance>('logger');
@@ -45,7 +83,12 @@ export default (app: Router): void => {
         text: Joi.string().required(),
       }),
     }),
-    middlewares.isAuth,
+    basicAuth({
+      users: {
+        [config.admin.user]: config.admin.password,
+      },
+      challenge: true,
+    }),
     async (req: Request, res: Response, next) => {
       const logger = Container.get<typeof LoggerInstance>('logger');
       logger.debug('Calling NPL recognition endpoint with body: %o', req.body);
