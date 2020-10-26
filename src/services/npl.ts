@@ -1,6 +1,5 @@
 import { Inject, Service } from 'typedi';
 import { EventDispatcher, EventDispatcherInterface } from '../decorators/eventDispatcher';
-import TypeNpl from '../models/enum/typeNpl';
 import { TextAnalyticsClient } from '@azure/ai-text-analytics';
 import { Options, PythonShell } from 'python-shell';
 import fileUpload from 'express-fileupload';
@@ -10,10 +9,12 @@ import fetch from 'node-fetch';
 import mapLimit from 'async/mapLimit';
 import CityModel from '../models/city';
 import ConfigurationModel from '../models/configuration';
-import { ICityData, ICityDetail, ICountryDetail } from '../interfaces/ICity';
+import { ICityDetail, ICountryDetail } from '../interfaces/ICity';
 import WBK from 'wikibase-sdk';
 import { IConfigurationValue, IConfigurationValueExtra } from '../interfaces/IConfiguration';
 import emoji from 'node-emoji';
+import { IDataCityDto } from '../interfaces/dto/IDataCityDto';
+import config from '../config';
 
 type UploadedFile = fileUpload.UploadedFile;
 
@@ -26,31 +27,6 @@ export default class NplService {
     @Inject('clientAzure') private clientAzure: TextAnalyticsClient,
     @EventDispatcher() private eventDispatcher: EventDispatcherInterface,
   ) {}
-
-  public async sentimentAnalysis(text: string, type: TypeNpl): Promise<any> {
-    // switch (type) {
-    //   case TypeNpl.Azure:
-    //     const result = {
-    //       ner: undefined,
-    //       sentiment: undefined,
-    //       sentimentScore: undefined,
-    //     };
-    //     result.ner = await this.clientAzure.recognizeEntities(Array.of(text));
-    //     result.sentiment = await this.clientAzure.analyzeSentiment(Array.of(text));
-    //     result.sentimentScore = await this.executePython(text, false);
-    //     return result;
-    //   case TypeNpl.Scapy:
-    //     return '';
-    // }
-    return '';
-  }
-
-  public async entityRecognition(text: string, type: TypeNpl): Promise<any> {
-    // if (type === TypeNpl.Azure) {
-    //   return this.clientAzure.recognizeEntities(Array.of(text));
-    // }
-    return '';
-  }
 
   public async processFile(country: string, city: string, file: UploadedFile): Promise<any> {
     const rl = readline.createInterface({
@@ -68,7 +44,7 @@ export default class NplService {
 
   private async processFileLines(country: string, city: string, rl: readline.Interface): Promise<any> {
     const results = [];
-    const max_process = 8;
+    const max_process = config.api.maxProcessPython;
     try {
       for await (const line of rl) {
         results.push(line);
@@ -82,12 +58,12 @@ export default class NplService {
       .then(async (data) => {
         const countryData = await this.obtainInformationCountry(country);
         const cityData = await this.obtainInformationCity(city, country);
-        const commentData = await this.obtainInformationEntity(data);
+        const commentData = data;
         return {
           country: countryData,
           city: cityData,
           comments: commentData,
-        };
+        } as IDataCityDto;
       })
       .then((data) => {
         return this.simplifyData(data);
@@ -106,7 +82,8 @@ export default class NplService {
     const wikiData = this.obtainWikiDataConfig();
     const urlSearch = wikiData.searchEntities({
       search: city,
-      language: 'en',
+      language: 'es',
+      uselang: 'es',
       limit: 5,
     });
     return fetch(urlSearch)
@@ -147,6 +124,7 @@ export default class NplService {
     const urlSearch = wikiData.searchEntities({
       search: country,
       language: 'es',
+      uselang: 'es',
       limit: 1,
     });
     return fetch(urlSearch)
@@ -196,9 +174,9 @@ export default class NplService {
   private async executePython(text: string, isResultJson: boolean): Promise<any> {
     const options = {
       mode: 'text',
-      pythonPath: '/home/josue/PycharmProjects/travelBuddyNpl/venv/bin/python',
+      pythonPath: '/home/josue/PycharmProjects/travelbuddy-npl/venv/bin/python',
       pythonOptions: ['-u'],
-      scriptPath: '/home/josue/PycharmProjects/travelBuddyNpl',
+      scriptPath: '/home/josue/PycharmProjects/travelbuddy-npl',
       args: [`-t${text}`],
     } as Options;
     const filePython = 'main.py';
@@ -299,7 +277,12 @@ export default class NplService {
                   return config.condition.value.localeCompare(valueProp) === 0;
                 });
                 valueAux = this.getMultiLevelProp(valueAux, config.value);
-                value = valueAux;
+                if (config.value_entity) {
+                  value = {};
+                  value[config.value_entity] = valueAux;
+                } else {
+                  value = valueAux;
+                }
                 break;
               default:
             }
@@ -346,7 +329,7 @@ export default class NplService {
     }
   }
 
-  private async obtainWikiInformationByProps(ids: any[], extras: IConfigurationValueExtra[] = []): Promise<any> {
+  private async obtainWikiInformationByProps(ids: string[], extras: IConfigurationValueExtra[] = []): Promise<any> {
     const wikiData = this.obtainWikiDataConfig();
     const urlSearch = wikiData.getEntities({
       ids: ids,
@@ -360,18 +343,24 @@ export default class NplService {
         const result = [];
         if (data.entities) {
           for (const key in data.entities) {
-            result.push({
-              id: data.entities[key].id,
-              value: WBK.simplify.labels(data.entities[key].labels),
-              ...this.obtainWikiInformationByPropsExtra(data.entities[key].claims, extras),
-            });
+            if (data.entities.hasOwnProperty(key)) {
+              const { labels, claims, id } = data.entities[key];
+              result.push({
+                id: id,
+                value: WBK.simplify.labels(labels),
+                ...this.obtainWikiInformationByPropsExtra(claims, extras),
+              });
+            }
           }
         }
         return result;
+      })
+      .catch((error) => {
+        this.logger.debug('Error obtainWikiInformationByProps: ', error);
       });
   }
 
-  private async updateCityDB(data: ICityData): Promise<any> {
+  private async updateCityDB(data: IDataCityDto): Promise<any> {
     let cityRecord = await this.cityModel.findOne({ 'city.name': data.city.name, 'country.name': data.country.name });
     const reviews = [];
     const questions = [];
@@ -429,14 +418,18 @@ export default class NplService {
   private obtainWikiInformationByPropsExtra(claims: any, extras: IConfigurationValueExtra[]) {
     const result = {};
     extras.forEach((item) => {
-      claims[item.id].forEach((itemAux) => {
-        result[item.name] = this.getMultiLevelProp(itemAux, item.value);
+      claims[item.id].forEach(async (itemAux) => {
+        let valueAux = this.getMultiLevelProp(itemAux, item.value);
+        if (item.is_value_entity && valueAux) {
+          valueAux = await this.obtainWikiInformationByProps([valueAux]);
+        }
+        result[item.name] = valueAux;
       });
     });
     return result;
   }
 
-  private simplifyData(data: any) {
+  private simplifyData(data: IDataCityDto) {
     if (data.country) {
       if (data.country.wiki) {
         if (data.country.wiki.alias) {
@@ -461,15 +454,23 @@ export default class NplService {
           data.country.wiki.geolocation = this.simplifyData1LevelValue(valueAux, 0);
         }
         if (data.country.wiki.timezone) {
-          const valueAux = Object.assign({}, data.country.wiki.timezone);
-          data.country.wiki.timezone = this.simplifyData1LevelValue(valueAux, 0);
-          data.country.wiki.timezone.value = this.simplifyDataLanguageEs(data.country.wiki.timezone.value);
+          const wikiCopy = Object.assign({}, data.country.wiki.timezone);
+          const valueAux = this.simplifyData1LevelValue(wikiCopy.value, 0);
+          data.country.wiki.timezone = {
+            ...valueAux,
+            description: wikiCopy.description,
+            value: this.simplifyDataLanguageEs(valueAux.value),
+          };
         }
         if (data.country.wiki.currency) {
-          let valueAux = Object.assign({}, data.country.wiki.currency);
-          valueAux = this.simplifyData1LevelValue(valueAux);
-          data.country.wiki.currency = this.simplifyData1LevelValue(valueAux, 0);
-          data.country.wiki.currency.value = this.simplifyDataLanguageEs(data.country.wiki.currency.value);
+          const wikiCopy = Object.assign({}, data.country.wiki.currency);
+          const valueAux = this.simplifyData1LevelValue(wikiCopy);
+          const valueAux2 = this.simplifyData1LevelValue(valueAux, 0);
+          data.country.wiki.currency = {
+            ...valueAux,
+            description: wikiCopy.description,
+            value: this.simplifyDataLanguageEs(valueAux2.value)
+          };
         }
         if (data.country.wiki.language) {
           const valueAux = Object.assign({}, data.country.wiki.language);

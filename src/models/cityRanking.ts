@@ -1,5 +1,5 @@
-import { ICityRanking } from '../interfaces/ICity';
 import mongoose from 'mongoose';
+import { ICityRanking } from '../interfaces/ICityRanking';
 
 const CityRanking = new mongoose.Schema(
   {

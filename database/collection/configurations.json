@@ -1,0 +1,271 @@
+[
+  {
+    "name": "mapPropertiesWikiCity",
+    "value": [
+      {
+        "id": "P1082",
+        "name": "population",
+        "description": "Población",
+        "condition": {
+          "operator": "first",
+          "type": "date",
+          "field": "date",
+          "value": null
+        },
+        "is_value_entity": null,
+        "value": null,
+        "extra": [
+          {
+            "name": "value",
+            "value": "mainsnak.datavalue.value.amount",
+            "type": "number"
+          },
+          {
+            "name": "date",
+            "value": "qualifiers.P585.0.datavalue.value.time",
+            "type": "date"
+          }
+        ]
+      },
+      {
+        "id": "P1549",
+        "name": "demonym",
+        "description": "Gentilicio",
+        "condition": {
+          "operator": "eq",
+          "type": "date",
+          "field": "mainsnak.datavalue.value.language",
+          "value": "es"
+        },
+        "is_value_entity": null,
+        "value": "mainsnak.datavalue.value.text",
+        "extra": null
+      },
+      {
+        "id": "P625",
+        "name": "geolocation",
+        "description": "Coordenadas",
+        "condition": null,
+        "is_value_entity": null,
+        "value": null,
+        "extra": [
+          {
+            "name": "latitude",
+            "value": "mainsnak.datavalue.value.latitude",
+            "type": null,
+            "field": null
+          },
+          {
+            "name": "longitude",
+            "value": "mainsnak.datavalue.value.longitude",
+            "type": null,
+            "field": null
+          },
+          {
+            "name": "precision",
+            "value": "mainsnak.datavalue.value.precision",
+            "type": null,
+            "field": null
+          }
+        ]
+      },
+      {
+        "id": "P856",
+        "name": "webpage",
+        "description": "Pagina Web",
+        "condition": null,
+        "is_value_entity": null,
+        "value": "mainsnak.datavalue.value",
+        "extra": null
+      },
+      {
+        "id": "P948",
+        "name": "banner",
+        "description": "Banner",
+        "condition": {
+          "operator": "group",
+          "type": "image",
+          "field": "mainsnak.datavalue.value",
+          "value": null
+        },
+        "is_value_entity": null,
+        "value": null,
+        "extra": null
+      },
+      {
+        "id": "P18",
+        "name": "images",
+        "description": "Imagenes",
+        "condition": {
+          "operator": "group",
+          "type": "image",
+          "field": "mainsnak.datavalue.value",
+          "value": null
+        },
+        "is_value_entity": null,
+        "value": null,
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "mapPropertiesWikiCountry",
+    "value": [
+      {
+        "id": "P1082",
+        "name": "population",
+        "description": "Población",
+        "condition": {
+          "operator": "first",
+          "type": "date",
+          "field": "date",
+          "value": null
+        },
+        "is_value_entity": null,
+        "value": null,
+        "extra": [
+          {
+            "name": "value",
+            "value": "mainsnak.datavalue.value.amount",
+            "type": "number"
+          },
+          {
+            "name": "date",
+            "value": "qualifiers.P585.0.datavalue.value.time",
+            "type": "date"
+          }
+        ]
+      },
+      {
+        "id": "P1549",
+        "name": "demonym",
+        "description": "Gentilicio",
+        "condition": {
+          "operator": "eq",
+          "type": "date",
+          "field": "mainsnak.datavalue.value.language",
+          "value": "es"
+        },
+        "is_value_entity": null,
+        "value": "mainsnak.datavalue.value.text",
+        "extra": null
+      },
+      {
+        "id": "P37",
+        "name": "language",
+        "description": "Idioma Oficial",
+        "condition": null,
+        "is_value_entity": true,
+        "value": "mainsnak.datavalue.value.id",
+        "extra": null
+      },
+      {
+        "id": "P625",
+        "name": "geolocation",
+        "description": "Coordenadas",
+        "condition": null,
+        "is_value_entity": null,
+        "value": null,
+        "extra": [
+          {
+            "name": "latitude",
+            "value": "mainsnak.datavalue.value.latitude",
+            "type": null,
+            "field": null
+          },
+          {
+            "name": "longitude",
+            "value": "mainsnak.datavalue.value.longitude",
+            "type": null,
+            "field": null
+          },
+          {
+            "name": "precision",
+            "value": "mainsnak.datavalue.value.precision",
+            "type": null,
+            "field": null
+          }
+        ]
+      },
+      {
+        "id": "P421",
+        "name": "timezone",
+        "description": "Huso Horario",
+        "condition": {
+          "operator": "eq",
+          "type": "date",
+          "field": "mainsnak.datavalue.value.entity-type",
+          "value": "item"
+        },
+        "value": "mainsnak.datavalue.value.id",
+        "extra": null,
+        "is_value_entity": true,
+        "value_entity": "P421",
+        "value_entity_extra": [
+          {
+            "id": "P2907",
+            "name": "offset",
+            "value": "mainsnak.datavalue.value.amount"
+          }
+        ]
+      },
+      {
+        "id": "P38",
+        "name": "currency",
+        "description": "Moneda",
+        "condition": {
+          "operator": "first",
+          "type": "date",
+          "field": "date",
+          "value": null
+        },
+        "value": null,
+        "extra": [
+          {
+            "name": "P38",
+            "value": "mainsnak.datavalue.value.id",
+            "type": null
+          },
+          {
+            "name": "date",
+            "value": "qualifiers.P580.0.datavalue.value.time",
+            "type": "date"
+          }
+        ],
+        "is_value_entity": true,
+        "value_entity": "P38",
+        "value_entity_extra": [
+          {
+            "id": "P489",
+            "name": "symbol",
+            "value": "mainsnak.datavalue.value.id",
+            "is_value_entity": true
+          }
+        ]
+      },
+      {
+        "id": "P856",
+        "name": "webpage",
+        "description": "Pagina Web",
+        "condition": null,
+        "is_value_entity": null,
+        "value": "mainsnak.datavalue.value",
+        "extra": null
+      },
+      {
+        "id": "P948",
+        "name": "banner",
+        "description": "Banner",
+        "condition": {
+          "operator": "group",
+          "type": "image",
+          "field": "mainsnak.datavalue.value",
+          "value": null
+        },
+        "is_value_entity": null,
+        "value": null,
+        "extra": null
+      }
+    ]
+  }
+]

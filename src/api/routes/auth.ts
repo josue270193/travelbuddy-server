@@ -3,8 +3,8 @@ import { Container } from 'typedi';
 import AuthService from '../../services/auth';
 import middlewares from '../middlewares';
 import { celebrate, Joi } from 'celebrate';
-import { IUserInputDTO } from '../../interfaces/IUser';
 import LoggerInstance from '../../loaders/logger';
+import { IUserInputDto } from '../../interfaces/dto/IUserInputDto';
 
 const route = Router();
 
@@ -25,7 +25,7 @@ export default (app: Router): void => {
       logger.debug('Calling Sign-Up endpoint with body: %o', req.body);
       try {
         const authServiceInstance = Container.get(AuthService);
-        const { user, token } = await authServiceInstance.SignUp(req.body as IUserInputDTO);
+        const { user, token } = await authServiceInstance.SignUp(req.body as IUserInputDto);
         return res.status(201).json({ user, token });
       } catch (err) {
         logger.error('🔥 error: %o', err);
@@ -61,7 +61,8 @@ export default (app: Router): void => {
     const logger = Container.get<typeof LoggerInstance>('logger');
     logger.debug('Calling Sign-Out endpoint with body: %o', req.body);
     try {
-      //@TODO AuthService.Logout(req.user) do some clever stuff
+      // const authServiceInstance = Container.get(AuthService);
+      // @TODO authServiceInstance.Logout(req.user) do some clever stuff
       return res.status(200).end();
     } catch (err) {
       logger.error('🔥 error %o', err);

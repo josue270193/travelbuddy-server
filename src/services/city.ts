@@ -3,15 +3,11 @@ import { EventDispatcher, EventDispatcherInterface } from '../decorators/eventDi
 import CityModel from '../models/city';
 import CityRankingModel from '../models/cityRanking';
 import CityEntityModel from '../models/cityEntity';
-import {
-  ICityDetailDto,
-  ICityDetailReviewDto,
-  ICityRanking,
-  ICityRankingDto,
-  ICountryRankingDto,
-} from '../interfaces/ICity';
 import TypeSortCity from '../models/enum/typeSortCity';
 import _ from 'lodash';
+import { ICityRankingDto, ICountryRankingDto } from '../interfaces/dto/ICountryRankingDto';
+import { ICityRanking } from '../interfaces/ICityRanking';
+import { ICityEntityDto, ICityEntityReviewDto } from '../interfaces/dto/ICityEntityDto';
 
 @Service()
 export default class CityService {
@@ -65,7 +61,7 @@ export default class CityService {
     }
   }
 
-  public async getDetailByCountryAndName(country: string, city: string): Promise<ICityDetailDto[]> {
+  public async getDetailByCountryAndName(country: string, city: string): Promise<ICityEntityDto[]> {
     if (country && city) {
       country = country.toLowerCase();
       city = city.toLowerCase();
@@ -87,9 +83,9 @@ export default class CityService {
                   return {
                     text: itemAux.text,
                     score: itemAux.score,
-                  } as ICityDetailReviewDto;
+                  } as ICityEntityReviewDto;
                 }),
-              } as ICityDetailDto;
+              } as ICityEntityDto;
             });
           } else {
             throw Error(`Error al obtener el detalle de la ciudad ${city} en ${country}`);

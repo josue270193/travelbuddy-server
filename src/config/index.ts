@@ -29,6 +29,10 @@ export default {
     level: process.env.LOG_LEVEL || 'silly',
   },
   /**
+   * Mongoose Debug
+   */
+  mongooseDebug: process.env.MONGOOSE_DEBUG,
+  /**
    * Agenda.js stuff
    */
   agenda: {
@@ -54,13 +58,14 @@ export default {
    * Admin config
    */
   admin: {
-    user: 'admin',
-    password: '123456',
+    user: process.env.ADMIN_USER,
+    password: process.env.ADMIN_PASSWORD,
   },
   /**
    * API configs
    */
   api: {
     prefix: '/api',
+    maxProcessPython: parseInt(process.env.PYTHON_PROCESS_MAXIMUM, 10),
   },
 };

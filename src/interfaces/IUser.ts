@@ -6,8 +6,3 @@ export interface IUser {
   salt: string;
 }
 
-export interface IUserInputDTO {
-  name: string;
-  email: string;
-  password: string;
-}

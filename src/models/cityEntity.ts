@@ -1,5 +1,5 @@
-import { ICityDetail } from '../interfaces/ICity';
 import mongoose from 'mongoose';
+import { ICityEntity } from '../interfaces/ICityEntity';
 
 const CityEntity = new mongoose.Schema(
   {
@@ -27,4 +27,4 @@ const CityEntity = new mongoose.Schema(
   { collection: 'citiesEntities' },
 );
 
-export default mongoose.model<ICityDetail & mongoose.Document>('CityEntity', CityEntity);
+export default mongoose.model<ICityEntity & mongoose.Document>('CityEntity', CityEntity);

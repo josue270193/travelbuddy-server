@@ -58,5 +58,4 @@ export default (app: Router): void => {
       }
     },
   );
-
 };

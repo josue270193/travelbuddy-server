@@ -31,4 +31,5 @@ export interface IConfigurationValueExtra {
   id: string;
   name: string;
   value: string;
+  is_value_entity: boolean;
 }

@@ -1,6 +1,6 @@
 enum TypeNpl {
   Azure = 'azure',
-  Scapy = 'scapy',
+  Local = 'local',
 }
 
 export default TypeNpl;

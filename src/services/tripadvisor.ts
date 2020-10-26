@@ -1,19 +1,20 @@
-import { Inject, Service } from 'typedi';
-import { EventDispatcher, EventDispatcherInterface } from '../decorators/eventDispatcher';
+import {Inject, Service} from 'typedi';
+import {EventDispatcher, EventDispatcherInterface} from '../decorators/eventDispatcher';
 import config from '../config';
 import scrapeIt from 'scrape-it';
-import { format } from 'util';
+import {format} from 'util';
 import _ from 'lodash';
 import * as fs from 'fs';
 import path from 'path';
-import { Logger } from 'winston';
+import {Logger} from 'winston';
 
 @Service()
 export default class TripadvisorService {
   constructor(
     @Inject('logger') private logger: Logger,
     @EventDispatcher() private eventDispatcher: EventDispatcherInterface,
-  ) {}
+  ) {
+  }
 
   public async getInformation(numberPage: number): Promise<any> {
     const url = this.getUrlTripadvisor(numberPage);
@@ -30,7 +31,7 @@ export default class TripadvisorService {
         },
       },
       title: '#HEADING',
-    }).then(({ data, response }) => {
+    }).then(({data, response}) => {
       this.logger.debug(`url: ${url} - status: ${response.statusCode}`);
       return this.obtainInformationPost(data, url);
     });
@@ -46,7 +47,7 @@ export default class TripadvisorService {
           content: '.postcontent .postBody > p',
         },
       },
-    }).then(({ data, response }) => {
+    }).then(({data, response}) => {
       this.logger.debug(`url: ${url} - status: ${response.statusCode}`);
       return data;
     });
@@ -56,34 +57,18 @@ export default class TripadvisorService {
     const ts = Date.now();
     const targetDir = 'out';
     const pathDir = path.join(__dirname, '..', '..', targetDir);
-    fs.mkdirSync(pathDir, { recursive: true });
+    fs.mkdirSync(pathDir, {recursive: true});
     const extractData = TripadvisorService.extractDataFromJson(jsonData);
     for (const [key, list] of extractData) {
       this.generateFileDataExtract(ts, targetDir, key, list);
-      this.generateFileDataCats(ts, targetDir, key, list);
     }
-  }
-
-  private generateFileDataCats(ts: number, targetDir: string, key: string, list: any[]): void {
-    const targetSubDir = 'cats';
-    const targetFile = `${key}_${ts}.txt`;
-    const pathDir = path.join(__dirname, '..', '..', targetDir, targetSubDir);
-    fs.mkdirSync(pathDir, { recursive: true });
-    const pathFile = path.join(__dirname, '..', '..', targetDir, targetSubDir, targetFile);
-
-    const stream = fs.createWriteStream(pathFile);
-    stream.once('open', () => {
-      list.forEach((text) => stream.write(`\t${text}\n`));
-      stream.end();
-      console.log('Archivo creado en: ', pathFile);
-    });
   }
 
   private generateFileDataExtract(ts: number, targetDir: string, key: string, list: any[]): void {
     const targetSubDir = 'extract';
     const targetFile = `${key}_${ts}.txt`;
     const pathDir = path.join(__dirname, '..', '..', targetDir, targetSubDir);
-    fs.mkdirSync(pathDir, { recursive: true });
+    fs.mkdirSync(pathDir, {recursive: true});
     const pathFile = path.join(__dirname, '..', '..', targetDir, targetSubDir, targetFile);
 
     const stream = fs.createWriteStream(pathFile);

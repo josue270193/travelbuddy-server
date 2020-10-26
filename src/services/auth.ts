@@ -3,10 +3,11 @@ import jwt from 'jsonwebtoken';
 import config from '../config';
 import argon2 from 'argon2';
 import { randomBytes } from 'crypto';
-import { IUser, IUserInputDTO } from '../interfaces/IUser';
+import { IUser} from '../interfaces/IUser';
 import UserModel from '../models/user';
 import { EventDispatcher, EventDispatcherInterface } from '../decorators/eventDispatcher';
 import events from '../subscribers/events';
+import {IUserInputDto} from "../interfaces/dto/IUserInputDto";
 
 @Service()
 export default class AuthService {
@@ -16,7 +17,7 @@ export default class AuthService {
     @EventDispatcher() private eventDispatcher: EventDispatcherInterface,
   ) {}
 
-  public async SignUp(userInputDTO: IUserInputDTO): Promise<{ user: IUser; token: string }> {
+  public async SignUp(userInputDTO: IUserInputDto): Promise<{ user: IUser; token: string }> {
     try {
       const salt = randomBytes(32);
       this.logger.silly('Hashing contrasena');
