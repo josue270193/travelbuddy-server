@@ -1,7 +1,7 @@
-import { Inject, Service } from 'typedi';
-import { EventDispatcher, EventDispatcherInterface } from '../decorators/eventDispatcher';
-import { TextAnalyticsClient } from '@azure/ai-text-analytics';
-import { Options, PythonShell } from 'python-shell';
+import {Inject, Service} from 'typedi';
+import {EventDispatcher, EventDispatcherInterface} from '../decorators/eventDispatcher';
+import {TextAnalyticsClient} from '@azure/ai-text-analytics';
+import {Options, PythonShell} from 'python-shell';
 import fileUpload from 'express-fileupload';
 import readline from 'readline';
 import fs from 'fs';
@@ -9,11 +9,11 @@ import fetch from 'node-fetch';
 import mapLimit from 'async/mapLimit';
 import CityModel from '../models/city';
 import ConfigurationModel from '../models/configuration';
-import { ICityDetail, ICountryDetail } from '../interfaces/ICity';
+import {ICityDetail, ICountryDetail} from '../interfaces/ICity';
 import WBK from 'wikibase-sdk';
-import { IConfigurationValue, IConfigurationValueExtra } from '../interfaces/IConfiguration';
+import {IConfigurationValue, IConfigurationValueExtra} from '../interfaces/IConfiguration';
 import emoji from 'node-emoji';
-import { IDataCityDto } from '../interfaces/dto/IDataCityDto';
+import {IDataCityDto} from '../interfaces/dto/IDataCityDto';
 import config from '../config';
 
 type UploadedFile = fileUpload.UploadedFile;
@@ -551,6 +551,7 @@ export default class NplService {
   private simplifyData1LevelValue(valueAux: any, index: number = null) {
     let result = {
       description: valueAux.description,
+      value: undefined,
     };
     if (index !== null) {
       result = {
