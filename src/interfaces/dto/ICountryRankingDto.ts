@@ -1,4 +1,4 @@
-import { ICityDetail, ICountryDetail } from '../ICity';
+import { ICountryDetail } from '../ICity';
 
 export interface ICountryRankingDto {
   country: ICountryDetail;
@@ -6,7 +6,8 @@ export interface ICountryRankingDto {
 }
 
 export interface ICityRankingDto {
-  _id: string;
-  city: ICityDetail;
+  id: string;
+  name: string;
+  wiki: any;
   rating_average: number;
 }

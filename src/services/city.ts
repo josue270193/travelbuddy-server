@@ -43,8 +43,9 @@ export default class CityService {
                   cities: result.map((item: ICityRanking) => {
                     const { _id, city, rating_average } = item;
                     return {
-                      _id,
-                      city,
+                      id: _id,
+                      name: city.name,
+                      wiki: city.wiki,
                       rating_average,
                     } as ICityRankingDto;
                   }),

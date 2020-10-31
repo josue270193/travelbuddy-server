@@ -1,0 +1,60 @@
+[
+  {
+    $unwind: {
+      path: "$reviews"
+    }
+  },
+  {
+    $unwind: {
+      path: "$reviews.entities"
+    }
+  },
+  {
+    $group: {
+      _id: {
+        city: "$city.name",
+        country: "$country.name",
+        entity_type: "$reviews.entities.type"
+      },
+      score_average: {
+        $avg: "$reviews.score"
+      },
+      entity_value: {
+        $addToSet: {
+          $toLower: "$reviews.entities.text"
+        }
+      },
+      reviews: {
+        $addToSet: "$reviews"
+      }
+    }
+  },
+  {
+    $project: {
+      "_id": 1,
+      "score_average": 1,
+      "entity_value": 1,
+      "reviews.text": 1,
+      "reviews.score": 1
+    }
+  },
+  {
+    $unwind: {
+      path: "$reviews"
+    }
+  },
+  {
+    $group: {
+      _id: "$_id",
+      score_average: {
+        $first: "$score_average"
+      },
+      entity_value: {
+        $first: "$entity_value"
+      },
+      reviews: {
+        $addToSet: "$reviews"
+      }
+    }
+  }
+]

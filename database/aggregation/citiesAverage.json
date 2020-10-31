@@ -1,0 +1,29 @@
+[
+  {
+    $unwind: {
+      path: "$reviews"
+    }
+  },
+  {
+    $group: {
+      _id: "$_id",
+      city: {
+        $first: "$city"
+      },
+      country: {
+        $first: "$country"
+      },
+      reviews: {
+        $push: "$reviews"
+      },
+      rating_average: {
+        $avg: "$reviews.score"
+      }
+    }
+  },
+  {
+    $sort: {
+      "rating_average": -1
+    }
+  }
+]

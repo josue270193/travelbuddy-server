@@ -3,7 +3,7 @@ import { Db } from 'mongodb';
 import config from '../config';
 
 export default async (): Promise<Db> => {
-  mongoose.set('debug', config.mongooseDebug);
+  mongoose.set('debug', !!+config.mongooseDebug);
 
   const connection = await mongoose.connect(config.databaseURL, {
     useNewUrlParser: true,

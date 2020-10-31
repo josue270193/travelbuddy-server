@@ -58,11 +58,10 @@ export default class NplService {
       .then(async (data) => {
         const countryData = await this.obtainInformationCountry(country);
         const cityData = await this.obtainInformationCity(city, country);
-        const commentData = data;
         return {
           country: countryData,
           city: cityData,
-          comments: commentData,
+          comments: data,
         } as IDataCityDto;
       })
       .then((data) => {
@@ -90,13 +89,40 @@ export default class NplService {
       .then((data) => data.json())
       .then((data) => {
         if (data.search) {
-          return data.search.find((item) => {
+          let search = data.search.find((item) => {
             let result = false;
             if (item.description) {
-              result = item.description.toLowerCase().includes(country);
+              const description = item.description.toLowerCase();
+              const keywords = ['capital', 'ciudad'];
+              if (keywords.some((keyword) => description.includes(keyword))) {
+                result = description.includes(country);
+              }
             }
             return result;
           });
+          if (!search) {
+            search = data.search.find((item) => {
+              let result = false;
+              if (item.description) {
+                const description = item.description.toLowerCase();
+                const keywords = ['capital', 'ciudad'];
+                if (keywords.some((keyword) => description.includes(keyword))) {
+                  result = true;
+                }
+              }
+              return result;
+            });
+          }
+          if (!search) {
+            search = data.search.find((item) => {
+              let result = false;
+              if (item.description) {
+                result = item.description.toLowerCase().includes(country);
+              }
+              return result;
+            });
+          }
+          return search;
         }
       })
       .then((countryFound) => {
@@ -469,7 +495,7 @@ export default class NplService {
           data.country.wiki.currency = {
             ...valueAux,
             description: wikiCopy.description,
-            value: this.simplifyDataLanguageEs(valueAux2.value)
+            value: this.simplifyDataLanguageEs(valueAux2.value),
           };
         }
         if (data.country.wiki.language) {
@@ -484,7 +510,6 @@ export default class NplService {
         if (data.city.wiki.alias) {
           const valueAux = Object.assign({}, data.city.wiki.alias);
           data.city.wiki.alias = this.simplifyDataLanguageEs(valueAux);
-          data.city.wiki.emoji = this.simplifyDataAliasEmoji(valueAux);
         }
         if (data.city.wiki.labels) {
           const valueAux = Object.assign({}, data.city.wiki.labels);

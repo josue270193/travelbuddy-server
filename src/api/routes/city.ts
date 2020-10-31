@@ -5,6 +5,7 @@ import LoggerInstance from '../../loaders/logger';
 import CityService from '../../services/city';
 import { celebrate, Joi } from 'celebrate';
 import TypeSortCity from '../../models/enum/typeSortCity';
+import middlewares from '../middlewares';
 
 const route = Router();
 
@@ -52,6 +53,27 @@ export default (app: Router): void => {
         const cityName = String(req.query.city);
         const result = await cityService.getDetailByCountryAndName(countryName, cityName);
         return res.json(result).status(200);
+      } catch (err) {
+        logger.error('🔥 error: %o', err);
+        return next(err);
+      }
+    },
+  );
+
+  route.post(
+    '/favority',
+    celebrate({
+      body: Joi.object({
+        id_city: Joi.string().required(),
+      }),
+    }),
+    middlewares.isAuth,
+    middlewares.attachCurrentUser,
+    async (req: IUserRequest, res: Response, next) => {
+      const logger = Container.get<typeof LoggerInstance>('logger');
+      const cityService = Container.get(CityService);
+      try {
+        return res.json().status(200);
       } catch (err) {
         logger.error('🔥 error: %o', err);
         return next(err);
