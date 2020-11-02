@@ -3,11 +3,11 @@ import jwt from 'jsonwebtoken';
 import config from '../config';
 import argon2 from 'argon2';
 import { randomBytes } from 'crypto';
-import { IUser} from '../interfaces/IUser';
+import { IUser } from '../interfaces/IUser';
 import UserModel from '../models/user';
 import { EventDispatcher, EventDispatcherInterface } from '../decorators/eventDispatcher';
 import events from '../subscribers/events';
-import {IUserInputDto} from "../interfaces/dto/IUserInputDto";
+import { IUserInputDto } from '../interfaces/dto/IUserInputDto';
 
 @Service()
 export default class AuthService {
@@ -66,9 +66,6 @@ export default class AuthService {
       const user = userRecord.toObject();
       Reflect.deleteProperty(user, 'password');
       Reflect.deleteProperty(user, 'salt');
-      /**
-       * Easy as pie, you don't need passport.js anymore :)
-       */
       return { user, token };
     } else {
       throw new Error('Invalid Password');
@@ -78,17 +75,7 @@ export default class AuthService {
   private generateToken(user) {
     const today = new Date();
     const exp = new Date(today);
-    exp.setDate(today.getDate() + 7);
-
-    /**
-     * A JWT means JSON Web Token, so basically it's a json that is _hashed_ into a string
-     * The cool thing is that you can add custom properties a.k.a metadata
-     * Here we are adding the userId, role and name
-     * Beware that the metadata is public and can be decoded without _the secret_
-     * but the client cannot craft a JWT to fake a userId
-     * because it doesn't have _the secret_ to sign it
-     * more information here: https://softwareontheroad.com/you-dont-need-passport
-     */
+    exp.setDate(today.getDate() + 30);
     this.logger.silly(`Sign JWT for userId: ${user._id}`);
     return jwt.sign(
       {
