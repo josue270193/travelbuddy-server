@@ -4,8 +4,11 @@
   "private": true,
   "main": "src/app.ts",
   "scripts": {
-    "build": "tsc",
-    "start": "nodemon",
+    "clean": "rm -rf ./build",
+    "copy-files": "cp -r ./src/api/public/ ./build/api/",
+    "build": "npm run clean && tsc && npm run copy-files",
+    "start": "ts-node build/app.js",
+    "start:dev": "nodemon",
     "inspect": "nodemon --inspect src/app.ts",
     "test": "jest",
     "lint": "npm run lint:js ",

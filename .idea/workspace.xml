@@ -7,7 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6342f1f1-6e73-4782-83bd-f9fcaad9125e" name="Default Changelist" comment="feat: Added configuration for BD.&#10;&#10;fix: Fixed build">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +32,6 @@
     <bower-package value="" />
     <bower.json value="" />
   </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupnpm">
       <scroll-view-position x="0" y="0" />
@@ -51,9 +48,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/aggregation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -66,18 +64,18 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v14.15.1/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/database/aggregation" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/database/aggregation" />
       <recent name="$PROJECT_DIR$/src/models" />
       <recent name="$PROJECT_DIR$/src/models/enum" />
       <recent name="$PROJECT_DIR$/src/services" />
@@ -101,21 +99,31 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="clean" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="lint" />
+        <script value="clean" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="lint:eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="copy-files" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="lint:eslint" />
+        <script value="copy-files" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -135,8 +143,9 @@
       <list>
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
-        <item itemvalue="npm.lint" />
-        <item itemvalue="npm.lint:eslint" />
+        <item itemvalue="npm.copy-files" />
+        <item itemvalue="npm.clean" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -185,6 +194,7 @@
       <workItem from="1604206625822" duration="1841000" />
       <workItem from="1604281774568" duration="1429000" />
       <workItem from="1604287023412" duration="4417000" />
+      <workItem from="1608247177024" duration="2838000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added method to create files with text from tripadvisor">
       <created>1600639357924</created>
@@ -282,148 +292,6 @@
     <MESSAGE value="fix: Fixed build and added dom on configuration" />
     <MESSAGE value="feat: Added configuration for BD.&#10;&#10;fix: Fixed build" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: Added configuration for BD.&#10;&#10;fix: Fixed build" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="418" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603732409346">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="418" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603732409346" />
-    <state x="644" y="342" width="621" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603506818741">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="644" y="342" width="621" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1603506818741" />
-    <state x="768" y="259" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1602257509945">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="768" y="259" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1602257509945" />
-    <state x="693" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603675644582">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="693" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603675644582" />
-    <state x="706" y="356" width="776" height="587" key="#xdebugger.evaluate" timestamp="1603857203425">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="706" y="356" width="776" height="587" key="#xdebugger.evaluate/0.0.1920.1080@0.0.1920.1080" timestamp="1603857203425" />
-    <state x="342" y="88" width="1226" height="911" key="CommitChangelistDialog2" timestamp="1601127862127">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="342" y="88" width="1226" height="911" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1601127862127" />
-    <state width="1268" height="506" key="DebuggerActiveHint" timestamp="1604158602674">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1268" height="506" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1604158602674" />
-    <state x="100" y="100" width="1720" height="880" key="DiffContextDialog" timestamp="1601131844234">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="100" y="100" width="1720" height="880" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601131844234" />
-    <state width="1897" height="486" key="GridCell.Tab.0.bottom" timestamp="1604295878581">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878581" />
-    <state width="1897" height="486" key="GridCell.Tab.0.center" timestamp="1604295878581">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878581" />
-    <state width="1897" height="486" key="GridCell.Tab.0.left" timestamp="1604295878581">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878581" />
-    <state width="1897" height="486" key="GridCell.Tab.0.right" timestamp="1604295878581">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878581" />
-    <state width="1897" height="486" key="GridCell.Tab.1.bottom" timestamp="1604295878582">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878582" />
-    <state width="1897" height="486" key="GridCell.Tab.1.center" timestamp="1604295878581">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878581" />
-    <state width="1897" height="486" key="GridCell.Tab.1.left" timestamp="1604295878581">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878581" />
-    <state width="1897" height="486" key="GridCell.Tab.1.right" timestamp="1604295878582">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878582" />
-    <state width="1897" height="486" key="GridCell.Tab.2.bottom" timestamp="1604295878582">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878582" />
-    <state width="1897" height="486" key="GridCell.Tab.2.center" timestamp="1604295878582">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878582" />
-    <state width="1897" height="486" key="GridCell.Tab.2.left" timestamp="1604295878582">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878582" />
-    <state width="1897" height="486" key="GridCell.Tab.2.right" timestamp="1604295878582">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878582" />
-    <state width="1897" height="486" key="GridCell.Tab.3.bottom" timestamp="1604295878583">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878583" />
-    <state width="1897" height="486" key="GridCell.Tab.3.center" timestamp="1604295878582">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878582" />
-    <state width="1897" height="486" key="GridCell.Tab.3.left" timestamp="1604295878582">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878582" />
-    <state width="1897" height="486" key="GridCell.Tab.3.right" timestamp="1604295878583">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1897" height="486" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1604295878583" />
-    <state x="449" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1603675056882">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="449" y="175" width="1022" height="737" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1603675056882" />
-    <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604172782543">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1604172782543" />
-    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603047144615">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603047144615" />
-    <state x="570" y="153" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604169135560">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="570" y="153" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1604169135560" />
-    <state x="741" y="455" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597716824561">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="741" y="455" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1597716824561" />
-    <state x="486" y="252" width="938" height="583" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1604206655089">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="486" y="252" width="938" height="583" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1080@0.0.1920.1080" timestamp="1604206655089" />
-    <state x="370" y="278" width="1264" height="662" key="find.popup" timestamp="1603662945955">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="370" y="278" width="1264" height="662" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603662945955" />
-    <state x="823" y="395" width="272" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1603037073782">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="823" y="395" width="272" height="278" key="jetbrains.javascript.buildTools.run-task-popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603037073782" />
-    <state x="671" y="312" width="568" height="462" key="refactoring.ChangeSignatureDialog" timestamp="1600639467676">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="671" y="312" width="568" height="462" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1600639467676" />
-    <state x="624" y="245" key="run.anything.popup" timestamp="1597732044732">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="624" y="245" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1597732044732" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1604031383258">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1604031383258" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
